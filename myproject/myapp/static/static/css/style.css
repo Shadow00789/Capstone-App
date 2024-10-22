@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.app {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+#habit-form {
+    margin-bottom: 20px;
+}
+
+#habit-input {
+    width: 70%;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px;
+}
+
+#habit-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#habit-list li {
+    padding: 10px;
+    background: #e0e0e0;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
