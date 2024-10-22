@@ -14,7 +14,7 @@ function addHabit(habitText) {
     const habitList = document.getElementById('habit-list');
     const listItem = document.createElement('li');
     listItem.textContent = habitText;
-    
+    showFeedback('Habit added!', 'success');
     const completeButton = document.createElement('button');
     completeButton.textContent = 'Complete';
     completeButton.onclick = function() {
@@ -74,3 +74,20 @@ if (localStorage.getItem('darkMode') === 'true') {
     document.body.classList.add('dark-mode');
     darkModeToggle.checked = true;
 }
+
+function showFeedback(message, type) {
+    const feedback = document.createElement('div');
+    feedback.textContent = message;
+    feedback.className = type;
+    document.body.appendChild(feedback);
+
+    setTimeout(() => {
+        document.body.removeChild(feedback);
+    }, 2000);
+}
+
+deleteButton.onclick = function() {
+    habitList.removeChild(listItem);
+    saveHabits();
+    showFeedback('Habit deleted!', 'error');
+};

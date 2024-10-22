@@ -90,3 +90,17 @@ button:hover {
     .app {
         width: 90%; /* Adjust width for smaller screens */
     }
+
+    .success {
+        color: green;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .error {
+        color: red;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
