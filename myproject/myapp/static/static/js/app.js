@@ -61,3 +61,16 @@ function loadHabits() {
 }
 
 loadHabits();
+
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+darkModeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('darkMode', darkModeToggle.checked);
+});
+
+// Load dark mode preference
+if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+    darkModeToggle.checked = true;
+}
