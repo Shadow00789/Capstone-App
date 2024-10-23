@@ -1,4 +1,4 @@
-Habit Tracker App
+h1 Habit Tracker App
 A simple and intuitive web application designed to help users track their daily habits. This app allows users to add, complete, and delete habits while providing a toggle for light and dark mode for a personalized experience.
 
 Features
