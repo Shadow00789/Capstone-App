@@ -140,3 +140,5 @@ INSTALLED_APPS = [
     ...,
     'myapp',
 ]
+
+LOGIN_REDIRECT_URL = '/'

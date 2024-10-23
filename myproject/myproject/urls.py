@@ -29,3 +29,8 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'),
 ]
+
+urlpatterns = [
+    path('', views.habit_list, name='habit_list'),
+    path('add/', views.add_habit, name='add_habit'),
+]
