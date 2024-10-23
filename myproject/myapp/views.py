@@ -17,3 +17,16 @@ def add_habit(request):
         Habit.objects.create(name=name, user=request.user)
         return redirect('habit_list')
     return render(request, 'add_habit.html')
+
+from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect
+
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+    else:
+        form = UserCreationForm()
+    return render(request, 'register.html', {'form': form})
